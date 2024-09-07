@@ -5,6 +5,8 @@ import NxWelcome from './nx-welcome';
 
 import { Route, Routes, Link } from 'react-router-dom';
 
+import LeafletMap from './LeafletMap';
+
 export function App() {
   return (
     <div>
@@ -24,6 +26,9 @@ export function App() {
           <li>
             <Link to="/page-2">Page 2</Link>
           </li>
+          <li>
+            <Link to="/map">Map</Link> {/* Add a link to the Map page */}
+          </li>
         </ul>
       </div>
       <Routes>
@@ -36,13 +41,9 @@ export function App() {
             </div>
           }
         />
-        <Route
-          path="/page-2"
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          }
+       <Route
+          path="/map"
+          element={<LeafletMap />}  {/* Render LeafletMap on the /map route */}
         />
       </Routes>
       {/* END: routes */}
