@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 import HomePage from './OlaMap';  // Import HomePage with OlaMap
 import './src/app/src/OlaMapsWebSDK/OlaMapsWebSDK/style.css';
-import { OlaMaps } from './src/OlaMapsWebSDK/OlaMapsWebSDK/olamaps-js-sdk.es.js';
+import { OlaMaps } from './OlaMapsWebSDK/OlaMapsWebSDK';
 
 export function App() {
   return (
