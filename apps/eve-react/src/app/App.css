@@ -1,4 +1,21 @@
-.search-location-input {
-  width: 600px;
-  margin: auto;
- }
+/* 
+.app {
+  text-align: center;
+  background: linear-gradient(135deg, #f06, #48f);
+  color: white;
+  min-height: 100vh;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  color: #a020f0; /* Neon purple logo theme 
+}
+*/
+
+.app {
+  background-color: rgb(196, 145, 176);
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  padding: 20px;
+}

@@ -1,0 +1,27 @@
+/*
+
+.event-list {
+  padding: 20px;
+}
+
+.event-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+*/
+
+.event-list {
+  padding: 20px;
+}
+
+.event-card {
+  background-color: rgba(224, 60, 60, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  color: blanchedalmond;
+  margin-bottom: 10px;
+}

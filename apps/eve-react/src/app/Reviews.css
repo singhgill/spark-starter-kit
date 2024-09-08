@@ -1,0 +1,12 @@
+.review-section {
+    margin-top: 20px;
+  }
+  
+  .review-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
