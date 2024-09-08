@@ -1,47 +1,17 @@
-// src/app/App.tsx
-import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
-import HomePage from './OlaMap';  // Import HomePage with OlaMap
-import './src/app/src/OlaMapsWebSDK/OlaMapsWebSDK/style.css';
-import { OlaMaps } from './OlaMapsWebSDK/OlaMapsWebSDK';
+import React, { useState } from "react";
+import "./App.css";
+import SearchLocationInput from "./components/GooglePlcasesApi";
+import MapComponent from "./components/Map";
 
-export function App() {
+function App() {
+  const [selectedLocation, setSelectedLocation] = useState({
+    lat: 28.7041,
+    lng: 77.1025,
+  });
   return (
-    <div>
-      <h1>title="eve-react"</h1>
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/page-2">Page 2</Link>
-          </li>
-          <li>
-            <Link to="/map">Map</Link> {/* Link to HomePage with OlaMap */}
-          </li>
-        </ul>
-      </div>
-      <Routes>
-        <Route 
-          path="/" 
-          element={
-            <div>
-              This is the generated root route.{' '}
-              <Link to="/page-2">Click here for page 2.</Link>
-            </div>
-          }
-        />
-        <Route 
-          path="/page-2" 
-          element={
-            <div>
-              <Link to="/">Click here to go back to root page.</Link>
-            </div>
-          } 
-        />
-        <Route path="/map" element={<HomePage />} /> {/* Render HomePage with OlaMap on the /map route */}
-      </Routes>
+    <div style={{ height: "100vh", width: "100%" }}>
+      <SearchLocationInput setSelectedLocation={setSelectedLocation} />
+      <MapComponent selectedLocation={selectedLocation} />
     </div>
   );
 }
